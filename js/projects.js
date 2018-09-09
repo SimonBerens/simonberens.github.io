@@ -26,6 +26,9 @@ $.ajax({
             `;
         }
         $("#about").html(html);
+        const script = document.createElement('script');
+        script.src = "https://buttons.github.io/buttons.js";
+        $("body").append(script);
 
     },
     error: (jqXHR, textStatus, errorThrown) => {
