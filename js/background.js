@@ -8,8 +8,10 @@ canvas.style.width = canvas.width / 2;
 canvas.style.height = canvas.height / 2;
 let ctx = canvas.getContext("2d");
 
+// so it doesn't lag out mobile
+const mobile_factor = $(window).width() < 1000? 1: 0.5;
 // setup constants
-ctx.lineWidth = 5;
+ctx.lineWidth = 5 * mobile_factor;
 const colors = [
     "rgb(255, 0, 0)",
     "rgb(255, 84, 0)",
@@ -21,8 +23,8 @@ const colors = [
     "rgb(255, 0, 246)"
 ];
 const speed_scale_factor = 0.05;
-const ball_radius = 10;
-const max_connect_radius = 200;
+const ball_radius = 10 * mobile_factor;
+const max_connect_radius = 200 * mobile_factor;
 
 class Ball {
 
@@ -87,7 +89,7 @@ class Ball {
 
 // initialize
 balls = [];
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 100 * mobile_factor; i++) {
     balls.push(new Ball());
 }
 
