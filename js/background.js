@@ -9,7 +9,7 @@ canvas.style.height = canvas.height / 2;
 let ctx = canvas.getContext("2d");
 
 // so it doesn't lag out mobile
-const mobile_factor = $(window).width() < 1000? 1: 0.5;
+const mobile_factor = $(window).width() > 1000? 1: 0.5;
 // setup constants
 ctx.lineWidth = 5 * mobile_factor;
 const colors = [
