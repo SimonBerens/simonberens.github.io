@@ -1,6 +1,7 @@
-// setup constants
-const api = "https://api.github.com";
+// YOUR NAME HERE
 const username = "SimonBerens";
+
+const api = "https://api.github.com";
 
 $.ajax({
     url: `${api}/users/${username}`,
@@ -17,7 +18,7 @@ $.ajax({
 <p class="lead"> ${u_bio} </p>
 <hr class="my-4">
 <p class="lead">
-    <a class="github-button" href="https://github.com/${u_name}" data-size="large" aria-label="Follow @ntkme on GitHub">Follow ${u_name}</a>
+    <a class="github-button" href="${u_repos}" data-size="large" aria-label="Follow @${u_name} on GitHub">Follow ${u_name}</a>
 </p>
     `;
         if (u_mail !== null) {
@@ -53,15 +54,15 @@ $.getJSON({
                 let html = "";
                 response.forEach((repo) => {
                     const r_name = repo.name;
-                    const r_language = repo.language; //todo check languages
-                    const r_desc = repo.description;
+                    const r_language = repo.language === null? "": repo.language; //todo check languages
+                    const r_desc = repo.description === null? "": repo.description;
                     const r_url = repo.html_url;
                     const start_html = "" +
                         "<div class=\"container-fluid\">\n" +
                         "    <div class=\"row multiple-items\">";
                     const end_html = "" +
                         "    </div>\n" +
-                        "</div>";
+                        "</div>\n<div class=\'alert alert-light\' role=\'alert\'>\n    Made with ProjectsPage by <a href=\'http://simonberens.me\'> Simon Berens </a>\n</div>";
                     html += `
 <div class='col-sm-4 col-md-offset-4' style="margin-bottom: 3%">
     <div class='card' style='width: 100%; border: 2px solid ${lang_colors[r_language].color} '>
