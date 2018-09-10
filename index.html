@@ -24,5 +24,12 @@
 <script src="lib/popper.min.js"></script>
 <script src="lib/bootstrap.min.css"></script>
 <script src="background.js"></script>
+<script>
+    $(() => {
+        const mobile = $(window).width() < 1000;
+        $("#name").css('font-size', mobile? "300%": "500%");
+        $("#desc").css('font-size', mobile? "150%": "300%");
+    })
+</script>
 </body>
 </html>
