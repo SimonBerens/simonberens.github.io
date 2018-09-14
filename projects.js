@@ -13,6 +13,7 @@ $.ajax({
         const u_bio = user.bio;
         const u_repos = user.html_url;
         const u_mail = user.email;
+        const u_ico = user.avatar_url;
         let html = `
 <h1 class="display-3"> ${u_name} </h1>
 <p class="lead"> ${u_bio} </p>
@@ -30,6 +31,7 @@ $.ajax({
         const script = document.createElement('script');
         script.src = "https://buttons.github.io/buttons.js";
         $("body").append(script);
+        $('head').append(`<link href='${u_ico}' rel="shortcut icon" type="image/x-icon" />`);
 
     },
     error: (jqXHR, textStatus, errorThrown) => {
