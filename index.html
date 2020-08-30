@@ -20,16 +20,13 @@
 </div>
 
 <!-- JS -->
-<script src="lib/jquery-3.3.1.min.js"></script>
 <script src="lib/popper.min.js"></script>
 <script src="lib/bootstrap.min.css"></script>
 <script src="background.js"></script>
 <script>
-    $(() => {
-        const mobile = $(window).width() < 1000;
-        $("#name").css('font-size', mobile? "300%": "500%");
-        $("#desc").css('font-size', mobile? "150%": "300%");
-    })
+    const mobile = window.screen.width < 1000;
+    document.getElementById("name").style.fontSize = mobile? "300%": "500%";
+    document.getElementById("desc").style.fontSize = mobile? "150%": "300%";
 </script>
 </body>
 </html>

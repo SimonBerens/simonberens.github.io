@@ -24,11 +24,11 @@ fetch(`${api}/users/${username}`)
 <p> Contact me at <strong> <span class="email"> ${u_mail}  </span> </strong></p>
             `;
         }
-        $("#about").html(html);
+        document.getElementById("about").innerHTML = html;
         const script = document.createElement('script');
         script.src = "https://buttons.github.io/buttons.js";
-        $("body").append(script);
-        $('head').append(`<link href='${u_ico}' rel="shortcut icon" type="image/x-icon" />`);
+        document.body.append(script);
+        document.head.append(`<link href='${u_ico}' rel="shortcut icon" type="image/x-icon" />`);
     });
 
 Promise.all([
@@ -58,6 +58,6 @@ Promise.all([
     </div>
 </div>
                     `;
-        $("#projects").html(start_html + html + end_html);
+        document.getElementById("projects").innerHTML = start_html + html + end_html;
     })
 });

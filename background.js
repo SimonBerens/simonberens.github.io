@@ -1,17 +1,15 @@
 // get canvas
-let canvas = $("#bg")[0];
+let canvas = document.getElementById("bg");
 
-// make it high res
-canvas.width = $(document).width() * 2;
-canvas.height = $(document).height() * 2;
-canvas.style.width = canvas.width / 2;
-canvas.style.height = canvas.height / 2;
+canvas.width = window.screen.width;
+canvas.height = window.screen.height;
+
 let ctx = canvas.getContext("2d");
 
 // so it doesn't lag out mobile
-const mobile_factor = $(window).width() > 1000? 1: 0.25;
+const mobile_factor = window.screen.width > 1000? 1: 0.25;
 // setup constants
-ctx.lineWidth = 5 * mobile_factor;
+ctx.lineWidth = 3;
 const colors = [
     "rgb(255, 0, 0)",
     "rgb(255, 84, 0)",
@@ -22,9 +20,9 @@ const colors = [
     "rgb(97, 0, 255)",
     "rgb(255, 0, 246)"
 ];
-const speed_scale_factor = 0.05;
-const ball_radius = 10;
-const max_connect_radius = 200;
+const speed_scale_factor = 0.035;
+const ball_radius = 5;
+const max_connect_radius = 100;
 
 class Ball {
 
