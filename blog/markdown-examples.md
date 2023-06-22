@@ -1,3 +1,7 @@
+---
+title: Markdown Examples
+date: '2023-06-12T22:04:40.588Z'
+---
 # Markdown Extension Examples
 
 This page demonstrates some of the built-in markdown extensions provided by VitePress.

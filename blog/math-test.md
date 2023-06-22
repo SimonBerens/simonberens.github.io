@@ -1,5 +1,6 @@
 ---
-title: My post
+title: Math Test
+date: '2023-06-12T22:04:40.588Z'
 ---
 # My post
 
