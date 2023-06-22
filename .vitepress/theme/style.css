@@ -89,3 +89,11 @@
   --docsearch-primary-color: var(--vp-c-brand) !important;
 }
 
+/**
+ * Typography
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-font-family-base: 'Figtree', sans-serif;
+    --vp-font-family-mono: 'JetBrains Mono', monospace;
+}
