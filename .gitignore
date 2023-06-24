@@ -1,3 +1,6 @@
-
 /.idea/
-/MyWebsite.iml
+
+/node_modules
+
+/.vitepress/cache
+/.vitepress/dist
