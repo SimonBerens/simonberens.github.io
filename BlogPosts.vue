@@ -4,17 +4,10 @@ import { data as posts } from './blog.data'
 
 <template>
   <ul>
-    <li v-for="post of posts">
-      {{post.date.string}} <a :href="post.url">{{ post.title }}</a>
+    <li v-for="post of posts" class="list-none">
+      {{post.date.string}}
+      <br class="sm:hidden"/>
+      <a :href="post.url" class="ml-2 sm:ml-12">{{ post.title }}</a>
     </li>
   </ul>
 </template>
-
-<style scoped>
-a {
-  margin-left: 3rem;
-}
-li {
-  list-style-type: none;
-}
-</style>
