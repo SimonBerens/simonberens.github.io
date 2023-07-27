@@ -14,6 +14,9 @@ export default defineConfig({
   description: "Simon Berens' Blog",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    nav: [
+      { text: 'Non-Technical Writing', link: 'https://www.simonberens.com/' }
+    ],
     socialLinks: [
       { icon: 'twitter', link: authorTwitter },
       { icon: 'github', link: 'https://github.com/SimonBerens' },
