@@ -7,8 +7,8 @@ const bruh = "{{< raw >}}$n${{< /raw >}}"
 </script>
 # Starting a technical blog in 2023
 
-Recently I had the urge to write some technical blog posts. By "technical", I mean a mix of math and code.
-Most platforms have good support for code, but near non-existent support for math. 
+Recently I had the urge to write some technical blog posts. By "technical", I mean a mix of math and code —
+most platforms have good support for code, but near non-existent support for math. 
 Hence, I decided to do a survey of what different platforms and tools offered.
 
 My requirements were:
@@ -139,6 +139,16 @@ and didn't want to re-implement the nice features Vitepress had:
 - [data loaders](https://vitepress.dev/guide/data-loading#createcontentloader)
 - dark mode toggle
 - social icons
+
+Here's an example of a codeblock with all the goodies Vitepress provides:
+
+```cpp
+// code test
+int main() {
+    std::cout << "Hello World!" << std::endl;
+    return 0;
+}
+```
 
 If you want to use Vitepress for your technical blog, I made a 
 [github template](https://github.com/SimonBerens/technical-blog-template) you can use that comes with Katex set up.
