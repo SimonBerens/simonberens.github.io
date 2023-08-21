@@ -11,7 +11,7 @@
  * Colors
  * -------------------------------------------------------------------------- */
 
- :root {
+:root {
   --vp-c-brand: #646cff;
   --vp-c-brand-light: #747bff;
   --vp-c-brand-lighter: #9499ff;
@@ -98,6 +98,6 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-    --vp-font-family-base: 'Figtree', sans-serif;
-    --vp-font-family-mono: 'JetBrains Mono', monospace;
+  --vp-font-family-base: "Figtree", sans-serif;
+  --vp-font-family-mono: "JetBrains Mono", monospace;
 }
