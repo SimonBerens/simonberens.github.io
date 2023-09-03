@@ -7,27 +7,27 @@ const bruh = "{{< raw >}}$n${{< /raw >}}"
 </script>
 # Starting a technical blog in 2023
 
-I have an ever-growing list of software engineering topics I want to write about, so naturally I spent an exorbitant amount of
+I have an ever-growing list of software engineering topics I want to write about, so naturally I've been spending
+an exorbitant amount of
 time finding the perfect blogging platform to stow away articles that three people in the world will read. The trouble is,
-I like to think I can dabble in theory, so I wanted a platform that could handle a deluge of math as well as code.
+I like to think I can dabble in theory, so I want a platform that could handle a deluge of math as well as code.
 
-Specifically, my requirements were:
+Specifically, my requirements are:
 - inline & display math via Katex
 - code blocks
 - easy editing (preferably markdown)
 
-Some nice pluses I looked out for:
+Some nice pluses I am looking for:
 - fast build & deploy times
 - custom components
 - small bundle size (one day I'll get to Dan Luu's [5kb](https://danluu.com/))
 
-Off the bat I knew of Gatsby, Hugo, and Jekyll, so I took those for a spin. I created a 
-[repo](https://github.com/SimonBerens/technical-blog-exploration) to keep track of what I did to get each
-site generator working. At the end of each section I'll put a link to the relevant commit for that section.
+Off the bat I knew of Gatsby, Hugo, and Jekyll, so I made a Minimum Viable Blog with each to and created a [repo](https://github.com/SimonBerens/technical-blog-exploration)
+to keep track of what I did to get each site generator working.
 
 ## Gatsby
 I used the [Gatsby Starter Blog](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog) to get up and running,
-and after a little yak shaving (Gatsby requires Node v18), I had a Gatsby blog running on my computer.
+and after a little [yak shaving](https://en.wiktionary.org/wiki/yak_shaving) (Gatsby requires Node v18), I had a Gatsby blog running on my computer.
 
 To get math working, I used the [gatsby-remark-katex](https://www.gatsbyjs.com/plugins/gatsby-remark-katex/) package.
 The only hiccup I had was needing to restart the dev server to see the effects.
@@ -35,10 +35,7 @@ The only hiccup I had was needing to restart the dev server to see the effects.
 Here is what an example blog post with Gatsby looks like:
 ![gatsby_pic.png](gatsby_pic.png)
 
-Though I was happy with the smooth setup process, Gatsby is notorious for being bloated, so I continued my search
-to explore what other frameworks offered. 
-
-[**commit**](https://github.com/SimonBerens/technical-blog-exploration/commit/8640b7c4505bfe9418c4a7326861ad3bb9762714#diff-325a28b3dca48201bb600ac5c4f1b4820074081fa5491223cd3437556f601fa0)
+Though I was happy with the smooth setup process, Gatsby is notorious for being bloated, so I sought greener pastures.
 
 ## Hugo
 I had no complaints setting up Hugo. `choco install go hugo` worked on the first try, 
@@ -67,8 +64,6 @@ css to position them properly depending on whether the equation was in display m
 
 I wasn't willing to put in that level of investment just yet, so I continued the journey.
 
-[**commit**](https://github.com/SimonBerens/technical-blog-exploration/commit/503e05185878af5a149b75481865986153646f3e)
-
 ## Jekyll
 Jekyll was my last resort out of the triad of blog generators that had stood the test of time. 
 As _the_ OG static blog generator, I expected it to be able to take anything I threw
@@ -96,8 +91,6 @@ This included the markdown-it-katex plugin, which gave me the confidence to pres
 Here is what an example blog post with VitePress (with no theme) looks like:
 ![vitepress_pic.png](vitepress_pic.png)
 
-[**commit**](https://github.com/SimonBerens/technical-blog-exploration/commit/57bee540b3b5476a32c10c37ca33e8df04601297)
-
 ## Next.js
 I told my friend about how I was wrapping up my quest to find the ultimate technical blogging platform,
 and he responded by venting about how annoying setting up his Next.js + MDX blog was. So here we are.
@@ -112,8 +105,6 @@ packages and adding the Katex CSS CDN to the header.
 
 Here is what an example blog post with Next looks like:
 ![next_pic.png](next_pic.png)
-
-[**commit**](https://github.com/SimonBerens/technical-blog-exploration/commit/4e006a0c1a15eda716e0cb3ebfde4c7c3b8bc4a3)
 
 ## Next.js vs. VitePress
 Now that I had finished exploring options, it was time to pick one for my blog. The decision was mostly between
@@ -158,7 +149,7 @@ blog post to add Katex to my site. It only works for latex on a single line — 
 parser.
 
 ### Medium
-Medium doesn't support math; people seem to resort to embedding images of rendered math.
+Medium doesn't support math, so it seems people to resort to embedding images of rendered math.
 
 ### Substack
 My [non-technical blog](https://simonberens.com/) is on Substack. It's a great platform for writing and building 
