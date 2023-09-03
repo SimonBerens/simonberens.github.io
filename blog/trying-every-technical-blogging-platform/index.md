@@ -1,11 +1,11 @@
 ---
-title: Starting a technical blog in 2023
+title: Trying every technical blogging platform
 date: 2023-06-22T21:49:44.137Z
 ---
 <script setup lang="ts">
 const bruh = "{{< raw >}}$n${{< /raw >}}"
 </script>
-# Starting a technical blog in 2023
+# Trying every technical blogging platform
 
 I have an ever-growing list of software engineering topics I want to write about, so naturally I've been spending
 an exorbitant amount of
